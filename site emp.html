@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عماله</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 0 20px #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        h1:hover {
+            color: #e3f2fd;
+        }
+
+        .btn {
+            background: #1b5e20;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #fff;
+        }
+
+        .btn:active {
+            transform: scale(1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXTvGM7vpnpH5OCb-M0ljH0kIHBAy6UuIhTxX9dQKObtpUVeL1ME0WVoezp5pVuxIBCXgwihlWdcRsZQSziGtX7y9ecB1dqLrd4gaKZDL69jLtS_4GhhFKJGhPO47HBpm-5C833GIMITbtWymiWR1fC7-1wH9HG8Xxr2kBB1EQWM0ruWgJgEYNXrpTwwiJ/s320/%D8%A8%D8%B1%D9%88%D9%81%D8%A7%D9%8A%D9%84.png" 
+        alt="Logo" class="logo animated">
+    <h1 class="animated">عماله</h1>
+    <button class="btn animated" onclick="window.location.href='https://wa.me/96871333396';">تواصل عبر واتساب</button>
+</body>
+</html>
