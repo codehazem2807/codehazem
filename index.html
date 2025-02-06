@@ -20,13 +20,22 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            padding: 20px;
+            text-align: center;
         }
 
         .logo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             animation: bounce 2s infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
         }
 
         @keyframes bounce {
@@ -41,11 +50,11 @@
         .text {
             font-size: 2rem;
             text-transform: uppercase;
-            text-align: center;
+            margin-top: 20px;
         }
 
         .shadow-text {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
             animation: float 3s infinite;
         }
 
@@ -67,7 +76,7 @@
             border-radius: 50px;
             cursor: pointer;
             transform-origin: center;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
         }
 
         .btn:hover {
@@ -86,6 +95,69 @@
 
         .animated-btn {
             animation: rotate-btn 2s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .text {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+
+            .section {
+                animation: fade-in 1s ease-in-out;
+            }
+
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                animation: pulse 1.5s infinite;
+            }
+
+            @keyframes pulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+
+            .shadow-text {
+                text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.9);
+                animation: shake 1.5s infinite;
+            }
+
+            @keyframes shake {
+                0%, 100% {
+                    transform: translateX(0);
+                }
+                25% {
+                    transform: translateX(-5px);
+                }
+                75% {
+                    transform: translateX(5px);
+                }
+            }
         }
 
     </style>
