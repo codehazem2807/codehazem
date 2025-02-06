@@ -183,7 +183,7 @@
 
     <div class="section" id="section4">
         <p class="text shadow-text">للتواصل معنا</p>
-        <button class="btn animated-btn" onclick="window.location.href='https://wa.me/96871333396';">تواصل معنا الان</button>
+        <button id="contact-btn" class="btn" onclick="window.location.href='https://wa.me/96871333396';">تواصل معنا الان</button>
     </div>
 
     <script>
@@ -194,6 +194,10 @@
             const scrollInterval = setInterval(() => {
                 if (currentSection > totalSections) {
                     clearInterval(scrollInterval);
+                    
+                    // إضافة الحركة إلى الزر
+                    const contactButton = document.getElementById("contact-btn");
+                    contactButton.classList.add("animated-btn");
                     return;
                 }
                 document.getElementById(`section${currentSection}`).scrollIntoView({ behavior: "smooth" });
