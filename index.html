@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عماله</title>
+    <title>عمالة - موقع رسمي</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4caf50, #81c784);
-            color: #fff;
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: #ecf0f1;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -48,9 +48,11 @@
         }
 
         .text {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
             margin-top: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         .shadow-text {
@@ -67,34 +69,38 @@
             }
         }
 
-        .btn {
-            background: #1b5e20;
-            color: #fff;
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transform-origin: center;
-            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        .video-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin-top: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fade-in 2s ease-in-out;
         }
 
-        .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px #fff;
+        .video-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
 
-        @keyframes rotate-btn {
-            0% {
-                transform: rotate(0deg);
+        .video-container:hover video {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            100% {
-                transform: rotate(360deg);
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-        }
-
-        .animated-btn {
-            animation: rotate-btn 2s ease-in-out;
         }
 
         @media (max-width: 768px) {
@@ -104,27 +110,11 @@
             }
 
             .text {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
-            .btn {
-                font-size: 1rem;
-                padding: 10px 20px;
-            }
-
-            .section {
-                animation: fade-in 1s ease-in-out;
-            }
-
-            @keyframes fade-in {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+            .video-container {
+                width: 90%;
             }
         }
 
@@ -159,45 +149,36 @@
                 }
             }
         }
-
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="section" id="section1">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXTvGM7vpnpH5OCb-M0ljH0kIHBAy6UuIhTxX9dQKObtpUVeL1ME0WVoezp5pVuxIBCXgwihlWdcRsZQSziGtX7y9ecB1dqLrd4gaKZDL69jLtS_4GhhFKJGhPO47HBpm-5C833GIMITbtWymiWR1fC7-1wH9HG8Xxr2kBB1EQWM0ruWgJgEYNXrpTwwiJ/s320/%D8%A8%D8%B1%D9%88%D9%81%D8%A7%D9%8A%D9%84.png" 
             alt="Logo" class="logo">
-        <h1 class="text">مرحبا بكم</h1>
+        <h1 class="text shadow-text">مرحبًا بكم</h1>
     </div>
 
     <div class="section" id="section2">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8kpz_qe2iASVkp2zRLp6qJEkHiUmKSXcx8VXUPpApC3CCAb23fNCtVqRRWeSih-CCAMgMUPQA0mNv3sJgfgJqt28Wp4Q1udCxTj-w2macQ5xldcRrwe7z2B9K1JEOBOWiJoTPGMgKxBFBaLYX0QSNwn-ldVtpjHKXpqHhSL1uYOGfn94aLt_qfwgerTB7/s320/IMG-20250206-WA0004.jpg" 
             alt="Next Logo" class="logo">
-        <p class="text">لا تدع مشروعك يتوقف</p>
+        <p class="text shadow-text">لا تدع مشروعك يتوقف</p>
     </div>
 
     <div class="section" id="section3">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjw8pdAJlhSBz3gmMWfpe9GBlseSqlTbLOnlFaSkjh6kyuo-xrFZfYHwTbybCsTXr-ux2G_GSmuEdW0YtfqSbwrWE8eg7zPow5jGyChLMqCc5cfuUwfwZ_Sg0ZYOkCjzXevKaAWGqXep_M7KZSiEi8gnxtmw2MkSGu_h9lOTj-CH1hB2HeMd-g5BeDTgx7V/s1280/IMG-20250206-WA0005.jpg" 
             alt="Specialties Logo" class="logo">
-        <p class="text">جميع التخصصات من مختلف الجنسيات</p>
-    </div>
-
-    <div class="section" id="section4">
-        <p class="text shadow-text">للتواصل معنا</p>
-        <button id="contact-btn" class="btn" onclick="window.location.href='https://wa.me/96871333396';">تواصل معنا الان</button>
+        <p class="text shadow-text">جميع التخصصات من مختلف الجنسيات</p>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             let currentSection = 1;
-            const totalSections = 4;
+            const totalSections = 3;
 
             const scrollInterval = setInterval(() => {
                 if (currentSection > totalSections) {
                     clearInterval(scrollInterval);
-                    
-                    // إضافة الحركة إلى الزر
-                    const contactButton = document.getElementById("contact-btn");
-                    contactButton.classList.add("animated-btn");
                     return;
                 }
                 document.getElementById(`section${currentSection}`).scrollIntoView({ behavior: "smooth" });
